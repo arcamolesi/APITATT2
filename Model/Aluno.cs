@@ -5,7 +5,10 @@ namespace APITATT2.Model
 {
     public class Aluno
     {
-        
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
         [Required]
         [StringLength(40)]
         public string Nome { get; set; }
